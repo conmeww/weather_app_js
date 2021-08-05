@@ -1,0 +1,596 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+/* secondary top menu */
+
+.top-secondary-menu {
+  width: 100%;
+  background-color: #389583;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.top-info p {
+  padding-right: 1.5rem;
+}
+
+.top-info p:not(:first-of-type) {
+  padding-left: 1.5rem;
+}
+
+.top-info p:not(:last-of-type) {
+  border-right: 1px solid #fff;
+}
+
+.top-info__adress::before {
+  padding-right: 0.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+.top-info__mail::before {
+  padding-right: 0.5rem;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+.top-info__hours::before {
+  padding-right: 0.5rem;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+.top-icons .fab {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.top-icons .fab:first-of-type {
+  border-left: 1px solid #fff;
+}
+
+/* main top menu */
+
+@-webkit-keyframes pop {
+  0% {
+    transform: scale(0.3);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.3);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+.call-us-top {
+  border-left: 2px solid #aaa;
+  padding-left: 3rem;
+  height: 50%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  justify-items: end;
+}
+
+.call-us-top .icon-container,
+.call-us-top .text-container {
+  width: 100%;
+}
+
+.phone-icon {
+  position: absolute;
+  text-align: center;
+}
+
+.phone-icon:hover #icon-phone-icon {
+  fill: #fff;
+}
+
+.phone-icon:hover:before {
+  -webkit-animation: pop 0.6s;
+          animation: pop 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.phone-icon:hover:after {
+  -webkit-animation: pulse 0.6s;
+          animation: pulse 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.phone-icon:before,
+.phone-icon:after {
+  transition: all 0.7s ease;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  color: #05396b;
+  font-size: 3rem;
+  z-index: 100;
+  margin-top: -3rem;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background-color: #99b1c9;
+  border-radius: 100%;
+}
+
+.phone-icon:before:hover,
+.phone-icon:after:hover {
+  color: #fff;
+}
+
+.phone-icon:after {
+  background-color: rgba(5, 57, 107, 0.5);
+  transform: scale(0.3);
+  opacity: 0;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  min-height: 90px;
+  overflow: hidden;
+}
+
+.navbar h1 {
+  padding-left: 3rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-self: end;
+}
+
+.nav-item a {
+  color: #000;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+  position: relative;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-item a:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.nav-item a:hover {
+  color: #3498db;
+}
+
+/* SECTIONS */
+
+.slide {
+  transform: translate(0);
+  transition: transform 0.7s ease-in-out;
+  z-index: 10;
+  padding-right: 3rem;
+}
+
+/* MOBILE MENU & ANIMATION */
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #3f3f3f;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: 25px;
+  display: none;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Media Queries */
+
+/* Mobile Devices - Phones/Tablets */
+
+/* ------------------------------------------ */
+
+.swiper-slide {
+  min-height: 600px;
+  text-align: center;
+}
+
+.slider-container {
+  padding: 100px;
+}
+
+.slider-sub-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 9.2px;
+  color: #ffffff;
+}
+
+.slider-title {
+  font-size: 70px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.03px;
+  color: #ffffff;
+  padding: 50px 0px;
+  opacity: 1;
+}
+
+.slider-buttton {
+  font-weight: 600;
+  letter-spacing: 1.29px;
+  border: solid 1px #ffffff;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.slide-1 {
+  background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/06/10/slider-02.jpg");
+  background-size: cover;
+}
+
+.slide-2 {
+  background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/06/10/slider-03.jpg");
+  background-size: cover;
+}
+
+.slide-3 {
+  background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/05/27/slider-01.jpg");
+  background-size: cover;
+}
+
+.slider-buttton {
+  display: inline-block;
+}
+
+.swiper-slide-active .slider-sub-title {
+  -webkit-animation: fadeInDown 1s;
+          animation: fadeInDown 1s;
+}
+
+.swiper-slide-active .slider-title {
+  -webkit-animation: fadeInLeft 1.5s;
+          animation: fadeInLeft 1.5s;
+}
+
+.swiper-slide-active.slide-2 .slider-title {
+  -webkit-animation: fadeInRight 1.5s;
+          animation: fadeInRight 1.5s;
+}
+
+.swiper-slide-active.slide-3 .slider-title {
+  -webkit-animation: fadeInLeft 1.5s;
+          animation: fadeInLeft 1.5s;
+}
+
+.swiper-slide-active .slider-buttton {
+  -webkit-animation: flipInX 1s;
+          animation: flipInX 1s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 2rem 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.swiper-slide {
+  min-height: 600px;
+  text-align: center;
+}
+
+.slider-container {
+  padding: 100px;
+}
+
+.slider-sub-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 9.2px;
+  color: #ffffff;
+}
+
+.slider-title {
+  font-size: 70px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.03px;
+  color: #ffffff;
+  padding: 50px 0px;
+  opacity: 1;
+}
+
+.slider-buttton {
+  font-weight: 600;
+  letter-spacing: 1.29px;
+  border: solid 1px #ffffff;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.slide-1 {
+  background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/06/10/slider-02.jpg");
+  background-size: cover;
+}
+
+.slide-2 {
+  background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/06/10/slider-03.jpg");
+  background-size: cover;
+}
+
+.slide-3 {
+  background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/05/27/slider-01.jpg");
+  background-size: cover;
+}
+
+.slider-buttton {
+  display: inline-block;
+}
+
+.swiper-slide-active .slider-sub-title {
+  -webkit-animation: fadeInDown 1s;
+          animation: fadeInDown 1s;
+}
+
+.swiper-slide-active .slider-title {
+  -webkit-animation: fadeInLeft 1.5s;
+          animation: fadeInLeft 1.5s;
+}
+
+.swiper-slide-active.slide-2 .slider-title {
+  -webkit-animation: fadeInRight 1.5s;
+          animation: fadeInRight 1.5s;
+}
+
+.swiper-slide-active.slide-3 .slider-title {
+  -webkit-animation: fadeInLeft 1.5s;
+          animation: fadeInLeft 1.5s;
+}
+
+.swiper-slide-active .slider-buttton {
+  -webkit-animation: flipInX 1s;
+          animation: flipInX 1s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 2rem 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  /* MOBILE HEADINGS */
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .call-us-top {
+    display: none;
+  }
+
+  .slide {
+    padding-left: 0;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .navbar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: start;
+    top: 55px;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 55px);
+    transform: translate(-101%);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .navbar li {
+    padding: 15px;
+  }
+
+  .navbar li:first-child {
+    margin-top: 50px;
+  }
+
+  .navbar li a {
+    font-size: 1rem;
+  }
+
+  .menu-toggle,
+  .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    transform: translate(0%) !important;
+  }
+
+  /* SECTIONS */
+
+  .headline {
+    height: 20vh;
+  }
+}

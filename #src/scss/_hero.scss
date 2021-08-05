@@ -1,0 +1,103 @@
+
+
+
+.swiper-slide {
+    min-height: 600px;
+    text-align: center;
+}
+
+.slider-container {
+    padding: 100px;
+}
+
+
+
+.slider-sub-title {
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 9.2px;
+    color: #ffffff;
+}
+
+.slider-title {
+    font-size: 70px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.03px;
+    color: #ffffff;
+    padding: 50px 0px;
+    opacity: 1;
+}
+
+
+
+
+
+
+.slider-buttton {
+    font-weight: 600;
+    letter-spacing: 1.29px;
+    border: solid 1px #ffffff;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+
+.slide-1 {
+    background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/06/10/slider-02.jpg");
+    background-size: cover;
+}
+
+.slide-2 {
+    background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/06/10/slider-03.jpg");
+    background-size: cover;
+}
+
+.slide-3 {
+    background: url("http://demo2.joomshaper.com/2019/indigo/images/2019/05/27/slider-01.jpg");
+    background-size: cover;
+}
+
+
+.slider-buttton {
+    display: inline-block;
+}
+
+.swiper-slide-active .slider-sub-title {
+    animation: fadeInDown 1s;
+  
+    
+    
+}
+
+.swiper-slide-active .slider-title {
+    animation: fadeInLeft 1.5s;
+    
+   
+}
+
+.swiper-slide-active.slide-2 .slider-title {
+    animation: fadeInRight 1.5s;
+}
+.swiper-slide-active.slide-3 .slider-title {
+    animation: fadeInLeft 1.5s;
+}
+
+
+.swiper-slide-active .slider-buttton {
+   
+    animation: flipInX 1s;
+}
+.swiper-button-next, .swiper-button-prev {
+    padding:2rem 1rem;
+background-color: transparentize($color-white, $amount: 0.3);
+}
+

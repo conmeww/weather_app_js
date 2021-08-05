@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="css/style.min.css">
+    <title>GULP</title>
+</head>
+<body>
+      <div class="top-secondary-menu">
+      <div class="top-info">
+          <p class="top-info__adress">72 Main Drive, Calibry, FL</p>
+          <p class="top-info__mail">learn.to.drive@drivega.com</p>
+          <p class="top-info__hours">Mon - Fri : 9:00am to 7:00pm</p>
+      </div>
+      <div class="top-icons">
+          <i class="fab fa-vk"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+  <nav class="navbar">
+    <h1><strong>LOGO</strong></h1>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav slide">
+      <li class="nav-item"><a href="#">Home</a></li>
+      <li class="nav-item"><a href="#">About</a></li>
+      <li class="nav-item"><a href="#">Work</a></li>
+      <li class="nav-item"><a href="#">Careers</a></li>
+      <li class="nav-item"><a href="#">Contact Us</a></li>
+      
+       
+      </a></li>
+     
+    </ul>
+    <div class="call-us-top">
+<div class="icon-container"> <a class="phone-icon">
+   
+          </a></div>
+          <div class="text-container">
+              <p>Learn To Drive? Call us</p>
+              <h3>+8(812)6457845</h3>
+          </div>
+
+
+
+   
+         
+    </div>
+  </nav>
+  
+     <!-- Slider main container -->
+
+ <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide-1">
+            <div class="container">
+                <div class="slider-container">
+                    <h4 class="slider-sub-title">Learn To Face Difficulty</h4>
+                    <div class="animated-area">
+                            <h1 class="slider-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                            <a href="#" class="slider-buttton">Start Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide-2">
+            <div class="container">
+                <div class="slider-container">
+                    <h4 class="slider-sub-title">Learn To Face Difficulty slider-2</h4>
+                    <div class="animated-area">
+                            <h1 class="slider-title">Autem ratione corporis itaque minus nihil</h1>
+                            <a href="#" class="slider-buttton">Start Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide-3">
+            <div class="container">
+                <div class="slider-container">
+                    <h4 class="slider-sub-title animated">Learn To Face Difficulty slider-3</h4>
+                    <div class="animated-area animated">
+                            <h1 class="slider-title">impedit maxime. Ipsam officiis aliquam sequi sit amet. </h1>
+                            <a href="#" class="slider-buttton">Start Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ...
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+<script>
+    $("#search-icon").click(function() {
+  $(".nav").toggleClass("search");
+  $(".nav").toggleClass("no-search");
+  $(".search-input").toggleClass("search-active");
+});
+
+$('.menu-toggle').click(function(){
+   $(".nav").toggleClass("mobile-nav");
+   $(this).toggleClass("is-active");
+});
+
+
+
+
+$(document).ready(function () {
+    //initialize swiper when document ready
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        spaceBetween: 50,
+        speed: 1000,
+        effect: 'fade',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        }
+    })
+
+});
+</script>
+
+</body>
+</html>
