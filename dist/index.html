@@ -1,154 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-   <link rel="stylesheet" href="css/style.min.css">
-    <title>GULP</title>
-</head>
-<body>
-      <div class="top-secondary-menu">
-      <div class="top-info">
-          <p class="top-info__adress">72 Main Drive, Calibry, FL</p>
-          <p class="top-info__mail">learn.to.drive@drivega.com</p>
-          <p class="top-info__hours">Mon - Fri : 9:00am to 7:00pm</p>
-      </div>
-      <div class="top-icons">
-          <i class="fab fa-vk"></i>
-        <i class="fab fa-whatsapp"></i>
-        <i class="fab fa-instagram"></i>
-    </div>
-  </div>
-  <nav class="navbar">
-    <h1><strong>LOGO</strong></h1>
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <ul class="nav slide">
-      <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#">About</a></li>
-      <li class="nav-item"><a href="#">Work</a></li>
-      <li class="nav-item"><a href="#">Careers</a></li>
-      <li class="nav-item"><a href="#">Contact Us</a></li>
-      
-       
-      </a></li>
-     
-    </ul>
-    <div class="call-us-top">
-<div class="icon-container"> <a class="phone-icon">
-   
-          </a></div>
-          <div class="text-container">
-              <p>Learn To Drive? Call us</p>
-              <h3>+8(812)6457845</h3>
-          </div>
-
-
-
-   
-         
-    </div>
-  </nav>
-  
-     <!-- Slider main container -->
-
- <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide slide-1">
-            <div class="container">
-                <div class="slider-container">
-                    <h4 class="slider-sub-title">Learn To Face Difficulty</h4>
-                    <div class="animated-area">
-                            <h1 class="slider-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                            <a href="#" class="slider-buttton">Start Projects</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide slide-2">
-            <div class="container">
-                <div class="slider-container">
-                    <h4 class="slider-sub-title">Learn To Face Difficulty slider-2</h4>
-                    <div class="animated-area">
-                            <h1 class="slider-title">Autem ratione corporis itaque minus nihil</h1>
-                            <a href="#" class="slider-buttton">Start Projects</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide slide-3">
-            <div class="container">
-                <div class="slider-container">
-                    <h4 class="slider-sub-title animated">Learn To Face Difficulty slider-3</h4>
-                    <div class="animated-area animated">
-                            <h1 class="slider-title">impedit maxime. Ipsam officiis aliquam sequi sit amet. </h1>
-                            <a href="#" class="slider-buttton">Start Projects</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ...
-    </div>
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
-    <script src="js/script.js"></script>
-<script>
-    $("#search-icon").click(function() {
-  $(".nav").toggleClass("search");
-  $(".nav").toggleClass("no-search");
-  $(".search-input").toggleClass("search-active");
-});
-
-$('.menu-toggle').click(function(){
-   $(".nav").toggleClass("mobile-nav");
-   $(this).toggleClass("is-active");
-});
-
-
-
-
-$(document).ready(function () {
-    //initialize swiper when document ready
-    var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-        spaceBetween: 50,
-        speed: 1000,
-        effect: 'fade',
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        }
-    })
-
-});
-</script>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="en">  <head>    <meta charset="UTF-8" />    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link      rel="stylesheet"      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    />    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />    <link      rel="stylesheet"      href="https://unpkg.com/swiper/swiper-bundle.min.css"    />    <link      rel="stylesheet"      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    />    <!--slick slider-->    <link      rel="stylesheet"      type="text/css"      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"    />    <link      rel="stylesheet"      type="text/css"      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"    />    <link      rel="stylesheet"      type="text/css"      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"    />    <link rel="stylesheet" href="css/style.min.css" />    <title>GULP</title>  </head>  <body>      <div class="top-secondary-menu">      <div class="top-info">          <p class="top-info__adress">Воронеж, Вавилова 18 кор.А</p>          <p class="top-info__mail">drive23school@gmail.com</p>          <p class="top-info__hours">Пн - Пт : 9:00 - 18:00</p>      </div>      <div class="top-icons">         <a href="#"><i class="fab fa-vk"></i></a>          <a href="#"><i class="fab fa-whatsapp"></i></a>        <a href="#"> <i class="fab fa-instagram"></i></a>           </div>  </div>  <nav class="navbar">    <h1><strong> ЧОУ ДПО Автошкола      №23</strong></h1>    <div class="menu-toggle" id="mobile-menu">      <span class="bar"></span>      <span class="bar"></span>      <span class="bar"></span>    </div>    <ul class="nav slide">      <li class="nav-item"><a href="#">главная</a></li>      <li class="nav-item"><a href="#">о нас</a></li>      <li class="nav-item"><a href="#">все курсы</a></li>      <li class="nav-item"><a href="#">контакты</a></li>                         </a></li>         </ul>    <div class="call-us-top"><div class="icon-container"> <a class="phone-icon">             </a></div>          <div class="text-container">              <p>Learn To Drive? Call us</p>              <h3>+8(812)6457845</h3>          </div>                </div>  </nav>      <!-- Slider main container -->    <div class="swiper-container">  <!-- Additional required wrapper -->  <div class="swiper-wrapper">    <!-- Slides -->    <div class="swiper-slide slide-1">      <div class="container">        <div class="slider-container">          <h4 class="slider-sub-title">            Учебно-методический центр безопасности дорожного движения Автошкола            №23          </h4>          <div class="animated-area">            <h1 class="slider-title">              Качественное обучение управлению автомобилем! Получи “права”              категории “B” с первого раза!            </h1>            <a href="#" class="slider-buttton">Записаться</a>          </div>        </div>      </div>    </div>    <div class="swiper-slide slide-2">      <div class="container">        <div class="slider-container">          <h4 class="slider-sub-title">Лучшие цены в городе</h4>          <div class="animated-area">            <h1 class="slider-title">Скидки до 10 000 ₽ до конца октября</h1>            <a href="#" class="slider-buttton">Записаться</a>          </div>        </div>      </div>    </div>    <div class="swiper-slide slide-3">      <div class="container">        <div class="slider-container">          <h4 class="slider-sub-title animated">Постоянный набор в группы</h4>          <div class="animated-area animated">            <h1 class="slider-title">              Для успешного выполнения образовательной деятельности в школе              открыто 3 учебных класса. Курсантам автошколы предлагается удобный              график занятий.            </h1>            <a href="#" class="slider-buttton">Записаться</a>          </div>        </div>      </div>    </div>    ...  </div>  <!-- If we need navigation buttons -->  <div class="swiper-button-prev"></div>  <div class="swiper-button-next"></div></div><div class="hero-bottom">  <div class="facilities">    <div class="facilities__boxes">      <div class="facilities__box facilities__boxes--1">        <i class="fas fa-map-marked-alt"></i>        <h3>Учебные классы в 5 районах города</h3>        <a href="">&rarr;</a>      </div>      <div class="facilities__box facilities__boxes--2">        <i class="fas fa-road"></i>        <h3>2 современных и удобных автодрома</h3>        <a href="">&rarr;</a>      </div>      <div class="facilities__box facilities__boxes--3">        <i class="fas fa-laptop"></i>        <h3>Тренажеры виртуальной реальности</h3>        <a href="">&rarr;</a>      </div>      <div class="facilities__box facilities__boxes--4">        <i class="fas fa-user-check"></i>        <h3>Запись на вождение онлайн</h3>        <a href="">&rarr;</a>      </div>    </div>  </div></div> <section class="about">  <div class="about__content">    <div class="img-box">      <picture><source srcset="./img/training_car.webp" type="image/webp"><img src="./img/training_car.jpg" alt="" /></picture>    </div>    <div class="text-box">      <h2>О нас</h2>      <span>Наша автошкола предлагает свои услуги начинающим водителям. </span>      <br />      <span        >Мы гарантируем своим курсантам самый высокий уровень подготовки.</span      >      <p>        Высококвалифицированные специалисты с многолетним опытом сделают ваше        обучение максимально комфортным и эффективным. Индивидуальный подход к        каждому из учеников позволяет качественно обучать водителей любой        возрастной категории. Мы гарантируем своим курсантам самый высокий        уровень теоретической и практической подготовки к экзамену в ГИБДД.        Кроме того, мы обеспечиваем Вас навыками уверенного и самостоятельного        вождения на дороге.      </p>      <br />      <p>        Каждый месяц мы выпускаем до 200 автомобилистов, которые показывают один        из самых высоких процентов успешной сдачи экзамена ГИБДД.      </p>    </div>  </div></section><!--COURSES--><section class="courses">  <div class="courses__content">    <div class="courses-info">      <span        >Предоставляется беспроцентная рассрочка,оплата производится в        безналичной форме на расчетный счет или наличными в кассу        автошколы.</span      >      <h2>Программы и стоимость</h2>      <h4>        Мы заинтересованны в том что бы наши кандидаты получили только        высококачественное обучение, поэтому только для наших клиентов возможна        полная рассрочка платежа без процентов на весь курс обучения с        первоначальной оплатой курса всего 5 000 рублей.      </h4>    </div>  </div>  <!--slick card slider -->  <div class="slick-slider">    <div class="slider-arrows"></div>    <div class="carousel">      <div class="carousel-item">        <picture><source srcset="./img/course-1.webp" type="image/webp"><img src="./img/course-1.jpg" /></picture>        <h3>Права категории «А»</h3>        <ul>          <li>134 часа теоретических занятий</li>          <li>Вождение — 10 занятий по 1.5 часа</li>          <li>Занятия по вождению проводятся по согласованию с инструктором</li>        </ul>        <h4>Стоимость обучения: <span class="highlighted">12 000</span></h4>        <a href="#" class="btn-basic">Подробнее</a>      </div>      <div class="carousel-item">        <picture><source srcset="./img/course_4.webp" type="image/webp"><img src="./img/course_4.jpg" /></picture>        <h3>Права категории «B»</h3>        <ul>          <li>134 часа теоретических занятий</li>          <li>Вождение — 10 часов с инструктором</li>          <li>Вождение проводится в будние дни с 9:00 до 17:00</li>        </ul>        <h4>Стоимость обучения: <span class="highlighted">20 000</span></h4>        <a href="#" class="btn-basic">Подробнее</a>      </div>      <div class="carousel-item">        <picture><source srcset="./img/course-2.webp" type="image/webp"><img src="./img/course-2.jpg" /></picture>        <h3>Права категории «С»</h3>        <ul>          <li>134 часа теоретических занятий</li>          <li>Вождение — 30 часов с инструктором</li>          <li>Занятия по вождению проводятся по согласованию с инструктором</li>        </ul>        <h4>Стоимость обучения: <span class="highlighted">25 000</span></h4>        <a href="#" class="btn-basic">Подробнее</a>      </div>      <div class="carousel-item">        <picture><source srcset="./img/course_3.webp" type="image/webp"><img src="./img/course_3.jpg" /></picture>        <h3>Получить права категории "A" и "B"</h3>        <ul>          <li>134 часа теоретических занятий</li>          <li>Курс теории можно пройти онлайн</li>          <li>            Обучение проходит на категорию «А» и отдельно на категорию «В»          </li>        </ul>        <h4>Стоимость обучения: <span class="highlighted">30 000</span></h4>        <a href="#" class="btn-basic">Подробнее</a>      </div>      <div class="carousel-item">        <picture><source srcset="./img/course_5.webp" type="image/webp"><img src="./img/course_5.jpg" /></picture>        <h3>Повышение навыков вождения</h3>        <ul>          <li>Индивидуальный график занятий.</li>          <li>Занятия на учебной площадке</li>          <li>Возможность отработать маршруты по выбору ученика</li>        </ul>        <h4>Стоимость обучения: <span class="highlighted">от 5 000</span></h4>        <a href="#" class="btn-basic">Подробнее</a>      </div>    </div>  </div></section><!--END OF COURSES SECTION--><!--BANNER--><div class="banner">  <h1>Drivega Helps Clients To Pass Test Earn a License On The First Try</h1>  <h4>    Get your    <h4 class="highlighted">FR</h4>    Lesson before a road test!  </h4></div><!--END BANNER--><!--CHOOSE SCHOOL--><section class="choose-school">  <div class="choose-school__content">    <div class="choose-school-box--1">      <picture><source srcset="./img/png_car-1.webp" type="image/webp"><img src="./img/png_car-1.png" alt="" /></picture>      <div class="choose-school--text-box">        <h1>Выбираем автошколу</h1>        <p>          Автомобиль – универсальное средство передвижения, которое делает          человека мобильным. Больше не нужно зависеть от расписания автобусов,          стоять в очереди и платить за проезд. Предположим, вы только          планируете купить машину или уже являетесь владельцем «железного          коня». Самое время сдать на права. Но в какой автошколе? Как ее          выбрать правильно, ведь от качества образования и полученных навыков          зависит безопасность вас и ваших близких        </p>        <p class="ul-name">          Большинство выбирает водительские курсы по таким критериям:        </p>        <ul>          <li>1. Чем ближе к дому или работе, тем лучше</li>          <li>2. Главное, чтобы недорого</li>          <li>3. Условия обучения (отзывы)</li>          <li>4. Качество преподавания</li>        </ul>      </div>    </div>    <div class="choose-school-box--2">      <div class="choose-school--text-box--2">        <p class="license">          Сразу оговоримся – список нужно менять с точностью до наоборот.          Поскольку во главе обучения стоит безопасность, преподаватели должны          быть опытными и квалифицированными. У автошколы должна быть лицензия,          которая подтверждает высокий уровень обучения.        </p>        <p>          Также рекомендуется уточнить количество и качество учебных          автомобилей, наличие автодрома для отработки элементов. Обязательно          узнайте стоимость полного курса обучения. Как правило, в громкой          рекламе никто не говорит о скрытых платежах. Не лишним будет          ознакомиться с отзывами в интернете.        </p>      </div>      <picture><source srcset="./img/attention_2.webp" type="image/webp"><img src="./img/attention_2.png" alt="" /></picture>    </div>  </div></section><!--END CHOOSE SCHOOL--><!--STEPS--><section class="steps">  <div class="steps__content">    <div class="steps-text">      <h1>Как начать обучение?</h1>    </div>    <div class="steps-box">      <div class="step step--1">        <h4>Выбрать программу обучения</h4>        <p>Связаться со школой и написать заявление на поступление</p>      </div>      <div class="step step--2">        <h4>Предоставить необходимые документы</h4>        <p>          паспорт гражданина РФ, <br />медицинская справка по форме 003-В/у,<br />          фотографии 3х4 (3 шт.)        </p>      </div>      <div class="step step--3">        <h4>Внести предоплату</h4>        <p>При единовременной оплате предоставляется скидка 4000</p>      </div>    </div>  </div></section><!--END STEPS-->    <section class="form">  <div class="form__content">    <div class="form-info">      <h1>Почему мы?</h1>      <h4>Гарантии:</h4>      <ul>        <li>          подбор инструктора, в индивидуальном порядке, для комфортного          обучения;        </li>        <li>индивидуальный подход к каждому ученику;</li>        <li>          преподаватели и опытные мастера производственного обучения передадут          вам весь свой многолетний опыт;        </li>        <li>          очень удобную и практичную систему обучения;личный кабинет ученика          онлайн, для записи на занятия по вождению в удобное для вас время;        </li>        <li>          отработка всех экзаминационных маршрутов ГИБДД и навыки вождения в          общем режиме города.постоянная эмоциональная поддержка на уроках          практической подготовки;        </li>      </ul>    </div>    <div class="form-box">      <div class="form-box__container">        <h1>Остались вопросы?</h1>        <h4>Оставьте заявку и мы свяжемся с вами в ближайшее время</h4>        <div class="wrapper animated bounceInLeft">          <div class="contact">            <form id="contactForm">              <p class="name-field">                <input                  type="text"                  placeholder="Имя"                  name="name"                  id="name"                  required                />              </p>              <p class="company-field">                <input                  type="text"                  placeholder="Телефон"                  name="phone"                  id="phone"                />              </p>              <p class="message-field full">                <textarea                  name="message"                  placeholder="Ваш вопрос"                  rows="5"                  id="message"                ></textarea>              </p>              <button class="btn-submit" type="submit">Оставить заявку</button>            </form>          </div>        </div>      </div>    </div>  </div></section> <footer class="footer">  <div class="footer__content">    <div class="col col--1">      <h2>ЧОУ ДПО Автошкола №23</h2>      <span>        Каждый месяц мы выпускаем до 200 автомобилистов, которые показывают один        из самых высоких процентов успешной сдачи экзамена ГИБДД.      </span>    </div>    <div class="col col--2">      <h2>Наши курсы</h2>      <ul>        <li>          <a href="#"> Права категории «А»</a>        </li>        <li>          <a href="#">Права категории «B»</a>        </li>        <li>          <a href="#"> Права категории «С»</a>        </li>        <li>          <a href="#">Получить права категории "A" и "B" </a>        </li>        <li>          <a href="#">Повышение навыков вождения </a>        </li>      </ul>    </div>    <div class="col col--3">      <h2>Контакты</h2>      <p class="top-info__adress">Воронеж, Вавилова 18 кор.А</p>      <p class="top-info__mail">drive23school@gmail.com</p>      <p class="top-info__hours">Пн - Пт : 9:00 - 18:00</p>      <div class="social-icons-bottom">        <a href="#"><i class="fab fa-vk"></i></a>        <a href="#"><i class="fab fa-whatsapp"></i></a>        <a href="#"> <i class="fab fa-instagram"></i></a>      </div>    </div>  </div></footer>    <script      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    ></script>    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    <!--slick slider-->    <script      type="text/javascript"      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"    ></script>    <script src="js/script.js"></script>    <script>      $("#search-icon").click(function() {        $(".nav").toggleClass("search");        $(".nav").toggleClass("no-search");        $(".search-input").toggleClass("search-active");      });      $(".menu-toggle").click(function() {        $(".nav").toggleClass("mobile-nav");        $(this).toggleClass("is-active");      });      $(document).ready(function() {        //initialize swiper when document ready        var mySwiper = new Swiper(".swiper-container", {          loop: true,          spaceBetween: 50,          speed: 1000,          effect: "fade",          navigation: {            nextEl: ".swiper-button-next",            prevEl: ".swiper-button-prev",          },          autoplay: {            delay: 5000,            disableOnInteraction: false,          },        });      });      $(document).ready(function() {        $(".carousel").slick({          slidesToShow: 3,          dots: false,          slidesToScroll: 1,          //autoplay: true,          autoplaySpeed: 2000,          arrows: true,          appendArrows: ".slider-arrows",          prevArrow: '<i class="fas fa-chevron-circle-left"></i>',          nextArrow: '<i class="fas fa-chevron-circle-right"></i>',        });      });    </script>  </body></html>

@@ -1,39 +1,67 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
-    @media only screen and (max-width: $bp-largest) {
-        font-size: 50%;
-    }
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
-    font-family: $font-primary;
-    color: $color-black;
-    font-weight: 300;
-    line-height: 1.6;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  color: $color-black;
+
+  line-height: 1.6;
+  background-color: #f5f5f5;
 }
-p, a {
-    font-size: 1.6rem;
+span {
+  font-size: 1.2rem;
+}
+p,
+a {
+  font-size: 1.6rem;
 }
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 h2 {
-    font-size: 2.5rem;
-
+  font-size: 2.5rem;
 }
- h3 {
-     font-size: 2rem;
- }
+h3 {
+  font-size: 2rem;
+}
 h4 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
+}
+
+/* buttons */
+.btn-basic {
+  height: 32px;
+  background: $color-secondary;
+  border-radius: 5px;
+  border: 0;
+  margin: 7px 0;
+  color: rgba(255, 255, 255, 1);
+  float: right;
+  padding: 0 20px 0 20px;
+  border-bottom: 3px solid $color-secondary-dark-1;
+  transition: all linear 0.2s;
+
+  &:hover {
+    background: $color-secondary-dark-1;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
